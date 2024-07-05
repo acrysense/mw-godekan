@@ -18,12 +18,60 @@
 	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="theme-color" content="#ffffff">
+	<!-- base styles -->
+	<style>
+		body {
+			cursor: none;
+		}
+
+		.custom-cursor {
+			position: fixed;
+			z-index: 100000;
+			width: 18px;
+			height: 18px;
+			pointer-events: none;
+			opacity: 0;
+		}
+
+		.custom-cursor::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			width: 12px;
+			height: 12px;
+			border: 3px solid #000000;
+		}
+
+		.custom-cursor.hover::before {
+			background: #000000;
+		}
+
+		.custom-cursor.visible {
+			opacity: 1;
+		}
+
+		.custom-cursor.white::before {
+			background: transparent;
+			border-color: #FFFFFF;
+		}
+
+		@media screen and (hover: none) {
+			.custom-cursor {
+				display: none;
+			}
+		}
+	</style>
 	<!-- styles -->
 	<link rel="stylesheet" href="css/vendor.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
 <body>
+	<div class="custom-cursor" id="custom-cursor"></div>
 	<!-- wrapper -->
 	<div class="wrapper">
 		<!-- header -->
@@ -83,7 +131,32 @@
 							<img src="img/news-inner-01-mobile.jpg" srcset="img/news-inner-01-mobile@2x.jpg 2x" alt="Image">
 						</picture>
 					</div>
-					<div class="news-inner__content"></div>
+					<div class="news-inner__wrapper">
+						<div class="news-inner__left">
+							<blockquote class="news-inner__quote">
+								<b>Возвращение к природе:</b><br>
+								Тренд на экологически <br>
+								устойчивую архитектуру
+							</blockquote>
+						</div>
+						<div class="news-inner__right">
+							<div class="news-inner__content content">
+								<p>В последние десятилетия мир стал все более осознанным в отношении своего влияния на окружающую среду. Архитектурная индустрия не осталась в стороне от этой трансформации, и сегодня мы наблюдаем яркий тренд на создание зданий и сооружений, которые не только служат функциональными объектами, но и активно взаимодействуют с природой, стремясь к минимальному воздействию на экосистему.</p>
+								<p>Основой для такого подхода становится концепция экологической устойчивости, которая охватывает не только процесс проектирования и строительства, но и жизненный цикл здания в целом. Экологически устойчивая архитектура стремится минимизировать отрицательное воздействие на окружающую среду, оптимизировать использование ресурсов, и создавать комфортные условия для проживания и работы.</p>
+							</div>
+						</div>
+					</div>
+					<div class="content-video news-inner__video" id="content-video">
+						<div class="content-video__media">
+							<img src="img/content-video-01.jpg" alt="Image">
+							<svg class="content-video__play">
+								<use xlink:href="img/sprite.svg#icon-play"></use>
+							</svg>
+						</div>
+						<div class="content-video__media-iframe">
+							<iframe data-src="https://www.youtube.com/embed/gijKKRvvCTM?si=baMNTC5s_rytfY-N" width="100%" height="100%" allow="autoplay; encrypted-media; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end of news inner -->
@@ -158,6 +231,26 @@
 		<!-- end of footer -->
 	</div>
 	<!-- end of wrapper -->
+	<!-- menu -->
+	<div class="menu" id="menu">
+		<div class="menu__wrap">
+			<ul class="menu__list">
+				<li class="menu__item">
+					<a href="projects.html" class="menu__link">Проекты</a>
+				</li>
+				<li class="menu__item">
+					<a href="about.html" class="menu__link">про БЮРО</a>
+				</li>
+				<li class="menu__item">
+					<a href="news.html" class="menu__link">НОВОСТИ</a>
+				</li>
+				<li class="menu__item">
+					<a href="contacts.html" class="menu__link">КОНТАКТЫ</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- end of menu -->
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
