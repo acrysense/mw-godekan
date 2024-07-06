@@ -33,6 +33,16 @@
 			opacity: 0;
 		}
 
+		.custom-cursor svg {
+			position: absolute;
+			width: 12px;
+			height: 12px;
+			opacity: 0;
+			color: #000000;
+			-webkit-transition: none;
+			transition: none;
+		}
+
 		.custom-cursor::before {
 			content: "";
 			position: absolute;
@@ -59,6 +69,40 @@
 			border-color: #FFFFFF;
 		}
 
+		.custom-cursor.left::before,
+		.custom-cursor.right::before {
+			background: #000000;
+		}
+
+		.custom-cursor.left svg {
+			top: 50%;
+			left: -4px;
+			-webkit-transform: translate(-100%, -50%) rotate(-90deg);
+			-ms-transform: translate(-100%, -50%) rotate(-90deg);
+			transform: translate(-100%, -50%) rotate(-90deg);
+			opacity: 1;
+		}
+
+		.custom-cursor.right svg {
+			top: 50%;
+			right: -4px;
+			-webkit-transform: translate(100%, -50%) rotate(90deg);
+			-ms-transform: translate(100%, -50%) rotate(90deg);
+			transform: translate(100%, -50%) rotate(90deg);
+			opacity: 1;
+		}
+
+		.custom-cursor.white.left::before,
+		.custom-cursor.white.right::before {
+			background: #FFFFFF;
+			border-color: #FFFFFF;
+		}
+
+		.custom-cursor.white.left svg,
+		.custom-cursor.white.right svg {
+			color: #FFFFFF;
+		}
+
 		@media screen and (hover: none) {
 			.custom-cursor {
 				display: none;
@@ -71,7 +115,11 @@
 </head>
 
 <body>
-	<div class="custom-cursor" id="custom-cursor"></div>
+	<div class="custom-cursor" id="custom-cursor">
+		<svg>
+			<use xlink:href="img/sprite.svg#icon-cursor-arrow"></use>
+		</svg>
+	</div>
 	<!-- wrapper -->
 	<div class="wrapper">
 		<!-- header -->
@@ -120,7 +168,7 @@
 			<!-- news inner -->
 			<section class="news-inner" id="news-inner">
 				<div class="container">
-					<div class="news-inner__main">
+					<div class="news-inner__main cursor-white">
 						<h1 class="news-inner__heading">
 							Возвращение к&nbsp;природе: <br>
 							Тренд на экологически <br>
@@ -146,7 +194,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="content-video news-inner__video" id="content-video">
+					<div class="content-video news-inner__video cursor-white" id="content-video">
 						<div class="content-video__media">
 							<img src="img/content-video-01.jpg" alt="Image">
 							<svg class="content-video__play">
@@ -165,19 +213,19 @@
 				<div class="container">
 					<h2 class="news-more__heading">Смотреть еще</h2>
 					<div class="news-more__wrapper">
-						<a href="#" class="news-more__item">
+						<a href="#" class="news-more__item cursor-white">
 							<img src="img/news-more-01.jpg" alt="Image">
 							<span>читать</span>
 						</a>
-						<a href="#" class="news-more__item">
+						<a href="#" class="news-more__item cursor-white">
 							<img src="img/news-more-02.jpg" alt="Image">
 							<span>читать</span>
 						</a>
-						<a href="#" class="news-more__item">
+						<a href="#" class="news-more__item cursor-white">
 							<img src="img/news-more-03.jpg" alt="Image">
 							<span>читать</span>
 						</a>
-						<a href="#" class="news-more__item">
+						<a href="#" class="news-more__item cursor-white">
 							<img src="img/news-more-04.jpg" alt="Image">
 							<span>читать</span>
 						</a>
