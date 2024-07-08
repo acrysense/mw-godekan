@@ -35,12 +35,12 @@
 
 		.custom-cursor svg {
 			position: absolute;
-			width: 12px;
-			height: 12px;
+			width: 10px;
+			height: 10px;
 			opacity: 0;
 			color: #000000;
 			-webkit-transition: none;
-			transition: none;
+			transition: all 0.15s ease;
 		}
 
 		.custom-cursor::before {
@@ -51,13 +51,22 @@
 			-webkit-transform: translate(-50%, -50%);
 			-ms-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
-			width: 12px;
-			height: 12px;
+			transform-origin: center center;
+			width: 10px;
+			height: 10px;
 			border: 3px solid #000000;
+			transition: all 0.15s ease;
+		}
+
+		.custom-cursor.scrolling::before {
+			height: 45px;
 		}
 
 		.custom-cursor.hover::before {
-			background: #000000;
+			/* background: #000000; */
+			-webkit-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			transform: scale(1.2);
 		}
 
 		.custom-cursor.visible {
@@ -168,6 +177,12 @@
 			<!-- projects inner -->
 			<section class="projects-inner" id="projects-inner">
 				<div class="container">
+					<a href="projects.html" class="projects-inner__back" aria-label="К проектам">
+						<svg>
+							<use xlink:href="img/sprite.svg#icon-close"></use>
+						</svg>
+						<span>← к проектам</span>
+					</a>
 					<div class="projects-inner__slider">
 						<div class="swiper-pagination"></div>
 						<div class="swiper cursor-white">
