@@ -16,7 +16,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="img/favicon/site.webmanifest">
 	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 	<!-- base styles -->
 	<style>
@@ -35,8 +35,8 @@
 
 		.custom-cursor svg {
 			position: absolute;
-			width: 10px;
-			height: 10px;
+			width: 12px;
+			height: 12px;
 			opacity: 0;
 			color: #000000;
 			-webkit-transition: none;
@@ -55,18 +55,27 @@
 			width: 10px;
 			height: 10px;
 			border: 3px solid #000000;
-			transition: all 0.15s ease;
+			transition: all 0.1s ease;
 		}
 
 		.custom-cursor.scrolling::before {
 			height: 45px;
 		}
 
+		.custom-cursor.scrolling.up::before {
+			margin-top: -17.5px;
+		}
+
+		.custom-cursor.scrolling.down::before {
+			margin-top: 17.5px;
+		}
+
 		.custom-cursor.hover::before {
-			/* background: #000000; */
-			-webkit-transform: scale(1.2);
-			-ms-transform: scale(1.2);
-			transform: scale(1.2);
+			border: 2px solid #000000;
+		}
+
+		.custom-cursor.active::before {
+			background: #000000;
 		}
 
 		.custom-cursor.visible {
@@ -76,6 +85,10 @@
 		.custom-cursor.white::before {
 			background: transparent;
 			border-color: #FFFFFF;
+		}
+
+		.custom-cursor.white.active::before {
+			background: #FFFFFF;
 		}
 
 		.custom-cursor.left::before,
@@ -103,8 +116,13 @@
 
 		.custom-cursor.white.left::before,
 		.custom-cursor.white.right::before {
-			background: #FFFFFF;
+			background: transparent;
 			border-color: #FFFFFF;
+		}
+
+		.custom-cursor.white.left.active::before,
+		.custom-cursor.white.right.active::before {
+			background: #FFFFFF;
 		}
 
 		.custom-cursor.white.left svg,
@@ -196,7 +214,7 @@
 									</ul>
 								</div>
 								<div class="contacts__controls">
-									<a href="#" class="contacts__control">.pdf</a>
+									<a href="#" class="contacts__control btn">.pdf</a>
 								</div>
 							</div>
 							<div class="contacts-socnav contacts__socnav">

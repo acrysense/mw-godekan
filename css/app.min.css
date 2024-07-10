@@ -66,6 +66,7 @@ picture {
 
 img {
   max-width: 100%;
+  pointer-events: none;
 }
 
 svg {
@@ -120,6 +121,16 @@ svg {
 }
 .btn--white:hover {
   color: #FFFFFF;
+}
+@media screen and (hover: hover) {
+  .btn:hover {
+    color: #262626;
+    border-color: #262626;
+  }
+  .btn--white:hover {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
 }
 @media screen and (max-width: 1023px) {
   .btn {
@@ -363,6 +374,11 @@ svg {
 .header__language:hover {
   color: #575756;
 }
+@media screen and (hover: hover) {
+  .header__language:hover {
+    color: #262626;
+  }
+}
 @media screen and (max-width: 1023px) {
   .header__language {
     display: none;
@@ -397,6 +413,11 @@ svg {
 }
 .nav__link:hover {
   color: #575756;
+}
+@media screen and (hover: hover) {
+  .nav__link:hover {
+    color: #262626;
+  }
 }
 
 .hamburger {
@@ -534,6 +555,11 @@ svg {
   letter-spacing: -0.42px;
   opacity: 0.3;
 }
+@media screen and (hover: hover) {
+  .footer__list a:hover {
+    opacity: 1;
+  }
+}
 .footer__to-top {
   display: block;
   min-width: 18px;
@@ -621,6 +647,15 @@ svg {
   line-height: 1;
   letter-spacing: -0.45px;
   text-transform: uppercase;
+  color: #575756;
+}
+.footer-nav__link:hover {
+  color: #575756;
+}
+@media screen and (hover: hover) {
+  .footer-nav__link:hover {
+    color: #262626;
+  }
 }
 
 .menu {
@@ -1145,6 +1180,7 @@ svg {
 .mission__wrap {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .mission__heading {
   position: absolute;
@@ -1210,9 +1246,10 @@ svg {
 }
 .mission__bg {
   position: relative;
-  z-index: 1;
+  z-index: -2;
   display: block;
   width: 100%;
+  pointer-events: none;
 }
 .mission__bg::before {
   content: "";
@@ -1242,7 +1279,121 @@ svg {
     padding-top: 237.578%;
   }
 }
+.mission__object {
+  position: absolute;
+  z-index: -1;
+  display: none;
+  width: 436px;
+  height: 382px;
+  background-image: url(../img/mission-decor.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  -webkit-animation: moveX 10s linear infinite alternate, moveY 8s linear infinite alternate;
+          animation: moveX 10s linear infinite alternate, moveY 8s linear infinite alternate;
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .mission__object {
+    width: 382px;
+    height: 375px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .mission__object {
+    width: 210px;
+    height: 206px;
+  }
+}
 
+@-webkit-keyframes moveX {
+  0% {
+    -webkit-transform: translateX(-436px);
+            transform: translateX(-436px);
+  }
+  25% {
+    -webkit-transform: translateX(calc(100% - 436px));
+            transform: translateX(calc(100% - 436px));
+  }
+  50% {
+    -webkit-transform: translateX(-436px);
+            transform: translateX(-436px);
+  }
+  75% {
+    -webkit-transform: translateX(calc(100% - 436px));
+            transform: translateX(calc(100% - 436px));
+  }
+  100% {
+    -webkit-transform: translateX(-436px);
+            transform: translateX(-436px);
+  }
+}
+
+@keyframes moveX {
+  0% {
+    -webkit-transform: translateX(-436px);
+            transform: translateX(-436px);
+  }
+  25% {
+    -webkit-transform: translateX(calc(100% - 436px));
+            transform: translateX(calc(100% - 436px));
+  }
+  50% {
+    -webkit-transform: translateX(-436px);
+            transform: translateX(-436px);
+  }
+  75% {
+    -webkit-transform: translateX(calc(100% - 436px));
+            transform: translateX(calc(100% - 436px));
+  }
+  100% {
+    -webkit-transform: translateX(-436px);
+            transform: translateX(-436px);
+  }
+}
+@-webkit-keyframes moveY {
+  0% {
+    -webkit-transform: translateY(-382px);
+            transform: translateY(-382px);
+  }
+  25% {
+    -webkit-transform: translateY(calc(100% - 382px));
+            transform: translateY(calc(100% - 382px));
+  }
+  50% {
+    -webkit-transform: translateY(-382px);
+            transform: translateY(-382px);
+  }
+  75% {
+    -webkit-transform: translateY(calc(100% - 382px));
+            transform: translateY(calc(100% - 382px));
+  }
+  100% {
+    -webkit-transform: translateY(-382px);
+            transform: translateY(-382px);
+  }
+}
+@keyframes moveY {
+  0% {
+    -webkit-transform: translateY(-382px);
+            transform: translateY(-382px);
+  }
+  25% {
+    -webkit-transform: translateY(calc(100% - 382px));
+            transform: translateY(calc(100% - 382px));
+  }
+  50% {
+    -webkit-transform: translateY(-382px);
+            transform: translateY(-382px);
+  }
+  75% {
+    -webkit-transform: translateY(calc(100% - 382px));
+            transform: translateY(calc(100% - 382px));
+  }
+  100% {
+    -webkit-transform: translateY(-382px);
+            transform: translateY(-382px);
+  }
+}
 .approach {
   padding: 50px 0;
 }
@@ -1340,9 +1491,6 @@ svg {
   width: 100%;
   opacity: 0.3;
 }
-.approach__item.is--active {
-  opacity: 1;
-}
 .approach__item + .approach__item {
   margin-top: 170px;
 }
@@ -1433,14 +1581,15 @@ svg {
   position: relative;
   z-index: 1;
   display: block;
-  min-width: 2038px;
-  width: 2038px;
+  min-width: 1888.28px;
+  width: 1888.28px;
 }
 .types-activities__img::before {
   content: "";
   display: block;
-  padding-top: 49.755%;
+  padding-top: 52.673%;
 }
+.types-activities__img svg,
 .types-activities__img img {
   position: absolute;
   top: 0;
@@ -1454,23 +1603,37 @@ svg {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (min-width: 744px) and (max-width: 1199px) {
+@media screen and (min-width: 1024px) {
+  .types-activities__img > img {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .types-activities__img > svg {
+    display: none;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
   .types-activities__img {
-    min-width: 1336.81px;
-    width: 1336.81px;
+    min-width: 1175.32px;
+    width: 1175.32px;
   }
   .types-activities__img::before {
-    padding-top: 90.116%;
+    padding-top: 102.499%;
   }
 }
 @media screen and (max-width: 743px) {
   .types-activities__img {
-    min-width: 704.79px;
-    width: 704.79px;
+    min-width: 607.85px;
+    width: 607.85px;
   }
   .types-activities__img::before {
-    padding-top: 90.116%;
+    padding-top: 102.499%;
   }
+}
+.types-activities__hover {
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .application {
@@ -2361,6 +2524,15 @@ svg {
   line-height: 1;
   letter-spacing: -0.45px;
   text-transform: uppercase;
+  color: #575756;
+}
+.team-card__link:hover {
+  color: #575756;
+}
+@media screen and (hover: hover) {
+  .team-card__link:hover {
+    color: #262626;
+  }
 }
 
 .awards__wrap {
@@ -2874,6 +3046,14 @@ svg {
 }
 .projects-inner__back:focus {
   outline: none;
+}
+@media screen and (hover: hover) {
+  .projects-inner__back:hover {
+    color: #262626;
+  }
+  .projects-inner__back:hover > svg {
+    color: #262626;
+  }
 }
 @media screen and (min-width: 1024px) {
   .projects-inner__back > span {
@@ -4384,6 +4564,15 @@ svg {
   font-weight: bold;
   line-height: 1.3;
   letter-spacing: -0.45px;
+  color: #575756;
+}
+.contacts__list a:hover {
+  color: #575756;
+}
+@media screen and (hover: hover) {
+  .contacts__list a:hover {
+    color: #262626;
+  }
 }
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .contacts__list {
@@ -4413,25 +4602,8 @@ svg {
   margin-bottom: -15px;
 }
 .contacts__control {
-  display: block;
   margin-right: 15px;
   margin-bottom: 15px;
-  padding: 4.25px 10px 6.25px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.45px;
-  background: transparent;
-  border: 2px solid #000000;
-  border-radius: 0;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-}
-.contacts__control:focus {
-  outline: none;
 }
 .contacts__socnav {
   margin-top: 30px;
@@ -4491,6 +4663,15 @@ svg {
   line-height: 1;
   letter-spacing: -0.45px;
   text-transform: uppercase;
+  color: #575756;
+}
+.contacts-socnav__link:hover {
+  color: #575756;
+}
+@media screen and (hover: hover) {
+  .contacts-socnav__link:hover {
+    color: #262626;
+  }
 }
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .contacts-socnav__link {
