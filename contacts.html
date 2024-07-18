@@ -129,7 +129,7 @@
 		}
 	</style>
 	<!-- styles -->
-	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="libs/swiper/swiper.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
@@ -176,7 +176,10 @@
 						</button>
 					</div>
 					<div class="header__right">
-						<a href="#" class="header__language">EN</a>
+						<div class="c-language header__language">
+							<button class="c-language__btn" data-lang="en">EN</button>
+							<button class="c-language__btn is--active" data-lang="ru">RU</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -255,8 +258,41 @@
 	</div>
 	<!-- end of menu -->
 	<!-- scripts -->
-	<script src="js/vendor.min.js"></script>
+	<script src="libs/inputmask/inputmask.min.js"></script>
+	<script src="libs/swiper/swiper-bundle.min.js"></script>
 	<script src="js/app.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=a4f98d75-d968-4be0-a9aa-aedc59f0eadd&lang=ru_RU" type="text/javascript"></script>
+	<script>
+		ymaps.ready(init);
+
+		function init() {
+			var myMap = new ymaps.Map('contacts-map', {
+				center: [42.980659, 47.506488],
+				zoom: 18,
+				controls: [],
+			});
+
+			var zoomControl = new ymaps.control.ZoomControl({
+				options: {
+					size: 'small',
+					position: {
+						top: 10,
+						right: 10
+					}
+				}
+			});
+			myMap.controls.add(zoomControl);
+
+			var myPlacemark = new ymaps.Placemark([42.980659, 47.506488], {}, {
+				iconLayout: 'default#image',
+				// iconImageHref: 'img/marker.svg',
+				// iconImageSize: [30, 42],
+				// iconImageOffset: [-15, -42]
+			});
+
+			myMap.geoObjects.add(myPlacemark);
+		}
+	</script>
 </body>
 
 </html>

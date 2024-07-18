@@ -129,7 +129,7 @@
 		}
 	</style>
 	<!-- styles -->
-	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="libs/swiper/swiper.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
@@ -171,7 +171,10 @@
 						</nav>
 					</div>
 					<div class="header__right">
-						<a href="#" class="header__language">EN</a>
+						<div class="c-language header__language">
+							<button class="c-language__btn" data-lang="en">EN</button>
+							<button class="c-language__btn is--active" data-lang="ru">RU</button>
+						</div>
 						<button class="hamburger" id="hamburger-toggle" aria-label="Меню">
 							<span class="hamburger__inner"></span>
 							<span class="hamburger__inner"></span>
@@ -646,7 +649,8 @@
 	</div>
 	<!-- end of menu -->
 	<!-- scripts -->
-	<script src="js/vendor.min.js"></script>
+	<script src="libs/inputmask/inputmask.min.js"></script>
+	<script src="libs/swiper/swiper-bundle.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
 

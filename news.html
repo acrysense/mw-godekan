@@ -129,7 +129,7 @@
 		}
 	</style>
 	<!-- styles -->
-	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="libs/swiper/swiper.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
@@ -176,7 +176,10 @@
 						</button>
 					</div>
 					<div class="header__right">
-						<a href="#" class="header__language">EN</a>
+						<div class="c-language header__language">
+							<button class="c-language__btn" data-lang="en">EN</button>
+							<button class="c-language__btn is--active" data-lang="ru">RU</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -189,75 +192,69 @@
 				<div class="container">
 					<div class="news__wrapper">
 						<div class="news-card news__item">
-							<div class="news-card__left">
-								<div class="news-card__body">
-									<a href="news-inner.html" class="news-card__title">
-										Возвращение к природе: <br>
-										Тренд на экологически <br>
-										устойчивую архитектуру
-									</a>
-									<p class="news-card__description">В последние десятилетия мир стал все более осознанным <br>в отношении своего влияния на окружающую среду. </p>
-								</div>
-							</div>
-							<div class="news-card__right">
-								<a href="news-inner.html" class="news-card__img cursor-white">
-									<img src="img/news-01.jpg" alt="Image">
-									<span>читать</span>
+							<div class="news-card__body">
+								<a href="news-inner.html" class="news-card__title">
+									Возвращение к природе: <br>
+									Тренд на экологически <br>
+									устойчивую архитектуру
 								</a>
-								<div class="news-card__body">
-									<a href="news-inner.html" class="news-card__subtitle">
-										искусство камня: величие и вдохновение <br>архитектурных шедевров
-									</a>
-									<p class="news-card__description">Как архитекторы используют камень <br>для создания вечности: техники и тайны </p>
-								</div>
+								<p class="news-card__description">В последние десятилетия мир стал все более осознанным <br>в отношении своего влияния на окружающую среду. </p>
 							</div>
 						</div>
 						<div class="news-card news__item">
-							<div class="news-card__left">
-								<div class="news-card__body">
-									<a href="news-inner.html" class="news-card__title">
-										Возвращение к природе: <br>
-										Тренд на экологически <br>
-										устойчивую архитектуру
-									</a>
-									<p class="news-card__description">В последние десятилетия мир стал все более осознанным <br>в отношении своего влияния на окружающую среду. </p>
-								</div>
-							</div>
-							<div class="news-card__right">
-								<a href="news-inner.html" class="news-card__img cursor-white">
-									<img src="img/news-02.jpg" alt="Image">
-									<span>читать</span>
+							<a href="news-inner.html" class="news-card__img cursor-white">
+								<img src="img/news-01.jpg" alt="Image">
+								<span>читать</span>
+							</a>
+							<div class="news-card__body">
+								<a href="news-inner.html" class="news-card__subtitle">
+									искусство камня: величие и вдохновение <br>архитектурных шедевров
 								</a>
-								<div class="news-card__body">
-									<a href="news-inner.html" class="news-card__subtitle">
-										искусство камня: величие и вдохновение <br>архитектурных шедевров
-									</a>
-									<p class="news-card__description">Как архитекторы используют камень <br>для создания вечности: техники и тайны </p>
-								</div>
+								<p class="news-card__description">Как архитекторы используют камень <br>для создания вечности: техники и тайны </p>
 							</div>
 						</div>
 						<div class="news-card news__item">
-							<div class="news-card__left">
-								<div class="news-card__body">
-									<a href="news-inner.html" class="news-card__title">
-										Возвращение к природе: <br>
-										Тренд на экологически <br>
-										устойчивую архитектуру
-									</a>
-									<p class="news-card__description">В последние десятилетия мир стал все более осознанным <br>в отношении своего влияния на окружающую среду. </p>
-								</div>
-							</div>
-							<div class="news-card__right">
-								<a href="news-inner.html" class="news-card__img cursor-white">
-									<img src="img/news-03.jpg" alt="Image">
-									<span>читать</span>
+							<div class="news-card__body">
+								<a href="news-inner.html" class="news-card__title">
+									Возвращение к природе: <br>
+									Тренд на экологически <br>
+									устойчивую архитектуру
 								</a>
-								<div class="news-card__body">
-									<a href="news-inner.html" class="news-card__subtitle">
-										искусство камня: величие и вдохновение <br>архитектурных шедевров
-									</a>
-									<p class="news-card__description">Как архитекторы используют камень <br>для создания вечности: техники и тайны </p>
-								</div>
+								<p class="news-card__description">В последние десятилетия мир стал все более осознанным <br>в отношении своего влияния на окружающую среду. </p>
+							</div>
+						</div>
+						<div class="news-card news__item">
+							<a href="news-inner.html" class="news-card__img cursor-white">
+								<img src="img/news-02.jpg" alt="Image">
+								<span>читать</span>
+							</a>
+							<div class="news-card__body">
+								<a href="news-inner.html" class="news-card__subtitle">
+									искусство камня: величие и вдохновение <br>архитектурных шедевров
+								</a>
+								<p class="news-card__description">Как архитекторы используют камень <br>для создания вечности: техники и тайны </p>
+							</div>
+						</div>
+						<div class="news-card news__item">
+							<div class="news-card__body">
+								<a href="news-inner.html" class="news-card__title">
+									Возвращение к природе: <br>
+									Тренд на экологически <br>
+									устойчивую архитектуру
+								</a>
+								<p class="news-card__description">В последние десятилетия мир стал все более осознанным <br>в отношении своего влияния на окружающую среду. </p>
+							</div>
+						</div>
+						<div class="news-card news__item">
+							<a href="news-inner.html" class="news-card__img cursor-white">
+								<img src="img/news-03.jpg" alt="Image">
+								<span>читать</span>
+							</a>
+							<div class="news-card__body">
+								<a href="news-inner.html" class="news-card__subtitle">
+									искусство камня: величие и вдохновение <br>архитектурных шедевров
+								</a>
+								<p class="news-card__description">Как архитекторы используют камень <br>для создания вечности: техники и тайны </p>
 							</div>
 						</div>
 					</div>
@@ -331,7 +328,8 @@
 	</div>
 	<!-- end of menu -->
 	<!-- scripts -->
-	<script src="js/vendor.min.js"></script>
+	<script src="libs/inputmask/inputmask.min.js"></script>
+	<script src="libs/swiper/swiper-bundle.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
 
