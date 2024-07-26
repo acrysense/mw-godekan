@@ -1923,28 +1923,415 @@ svg {
 .mission__object {
   position: absolute;
   z-index: -1;
-  display: none;
-  width: 436px;
-  height: 382px;
-  background-image: url(../img/mission-decor.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.mission__object--first {
+  bottom: -54px;
+  left: 127px;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 436px;
+  height: 382px;
+  background-image: url(../img/mission-object-01.svg);
+}
+.mission__object--second {
+  right: -100px;
+  bottom: -22px;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  width: 357px;
+  height: 308px;
+  background-image: url(../img/mission-object-02.svg);
+}
+.mission__object--third {
+  top: -130px;
+  right: 229px;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  width: 201px;
+  height: 299px;
+  background-image: url(../img/mission-object-03.svg);
+}
+.mission__object--fourth {
+  top: -130px;
+  right: 632px;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  width: 201px;
+  height: 299px;
+  background-image: url(../img/mission-object-03.svg);
+}
+.mission__object--fifth {
+  left: 91px;
+  bottom: -64px;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 393px;
+  height: 344px;
+  background-image: url(../img/mission-object-04.svg);
+}
+.mission__object--sixth {
+  display: none;
+  left: -98px;
+  bottom: -46px;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  width: 357px;
+  height: 308px;
+  background-image: url(../img/mission-object-05.svg);
+}
+.mission__object--seventh {
+  display: none;
+  right: 107px;
+  bottom: -59px;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  width: 394px;
+  height: 344px;
+  background-image: url(../img/mission-object-06.svg);
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .mission__object--first {
+    bottom: -34px;
+    width: 269px;
+    height: 236px;
+  }
+  .mission__object--second {
+    right: -60px;
+    width: 220px;
+    height: 190px;
+  }
+  .mission__object--third {
+    top: -100px;
+    width: 124px;
+    height: 185px;
+  }
+  .mission__object--fourth {
+    top: -100px;
+    width: 124px;
+    height: 185px;
+  }
+  .mission__object--fifth {
+    width: 242px;
+    height: 212px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mission__object--first {
+    -webkit-animation: animateFirst 16s infinite;
+            animation: animateFirst 16s infinite;
+  }
+  .mission__object--second {
+    -webkit-animation: animateSecond 16s infinite;
+            animation: animateSecond 16s infinite;
+  }
+  .mission__object--third {
+    -webkit-animation: animateThird 16s infinite;
+            animation: animateThird 16s infinite;
+  }
+  .mission__object--fourth {
+    -webkit-animation: animateFourth 16s infinite;
+            animation: animateFourth 16s infinite;
+  }
+  .mission__object--fifth {
+    -webkit-animation: animateFifth 16s infinite;
+            animation: animateFifth 16s infinite;
+  }
 }
 @media screen and (min-width: 744px) and (max-width: 1023px) {
-  .mission__object {
-    width: 382px;
-    height: 375px;
+  .mission__object--first {
+    left: -18px;
+    bottom: -8px;
+    -webkit-animation: animateFirstMobile 16s infinite;
+            animation: animateFirstMobile 16s infinite;
+  }
+  .mission__object--second {
+    right: -40px;
+    bottom: -36px;
+    -webkit-animation: animateSecondMobile 16s infinite;
+            animation: animateSecondMobile 16s infinite;
+  }
+  .mission__object--third {
+    top: -27px;
+    right: 80px;
+    -webkit-animation: animateThirdMobile 16s infinite;
+            animation: animateThirdMobile 16s infinite;
+  }
+  .mission__object--fourth {
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+    top: 91px;
+    right: -26px;
+    -webkit-animation: animateFourthMobile 16s infinite;
+            animation: animateFourthMobile 16s infinite;
+  }
+  .mission__object--fifth {
+    left: -23px;
+    bottom: -24px;
+    -webkit-animation: animateFifthMobile 16s infinite;
+            animation: animateFifthMobile 16s infinite;
   }
 }
 @media screen and (max-width: 743px) {
-  .mission__object {
-    width: 210px;
-    height: 206px;
-    background-image: url(../img/mission-decor-mobile.svg);
+  .mission__object--first {
+    left: -7px;
+    bottom: -6px;
+    width: 269px;
+    height: 236px;
+    -webkit-animation: animateFirstMobile 16s infinite;
+            animation: animateFirstMobile 16s infinite;
+  }
+  .mission__object--second {
+    right: -10px;
+    bottom: -7px;
+    width: 220px;
+    height: 190px;
+    -webkit-animation: animateSecondMobile 16s infinite;
+            animation: animateSecondMobile 16s infinite;
+  }
+  .mission__object--third {
+    top: -8px;
+    right: -32px;
+    width: 124px;
+    height: 185px;
+    -webkit-animation: animateThirdMobile 16s infinite;
+            animation: animateThirdMobile 16s infinite;
+  }
+  .mission__object--fourth {
+    top: 141px;
+    right: -62px;
+    width: 124px;
+    height: 185px;
+    -webkit-animation: animateFourthMobile 16s infinite;
+            animation: animateFourthMobile 16s infinite;
+  }
+  .mission__object--fifth {
+    left: -8px;
+    bottom: -19px;
+    width: 242px;
+    height: 212px;
+    -webkit-animation: animateFifthMobile 16s infinite;
+            animation: animateFifthMobile 16s infinite;
   }
 }
 
+@-webkit-keyframes animateFirst {
+  0%, 40%, 50%, 100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  10%, 30% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes animateFirst {
+  0%, 40%, 50%, 100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  10%, 30% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes animateSecond {
+  0%, 80%, 90%, 100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  10%, 70% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes animateSecond {
+  0%, 80%, 90%, 100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  10%, 70% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes animateThird {
+  0%, 40%, 50%, 100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  10%, 30% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes animateThird {
+  0%, 40%, 50%, 100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  10%, 30% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes animateFourth {
+  0%, 40%, 80%, 90%, 100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  45%, 70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes animateFourth {
+  0%, 40%, 80%, 90%, 100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  45%, 70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes animateFifth {
+  0%, 40%, 80%, 90%, 100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  45%, 70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes animateFifth {
+  0%, 40%, 80%, 90%, 100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  45%, 70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes animateFirstMobile {
+  0%, 35%, 45%, 100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  10%, 25% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes animateFirstMobile {
+  0%, 35%, 45%, 100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  10%, 25% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes animateSecondMobile {
+  0%, 30%, 65%, 75%, 100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  40%, 55% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes animateSecondMobile {
+  0%, 30%, 65%, 75%, 100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  40%, 55% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes animateThirdMobile {
+  0%, 65%, 75%, 100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  10%, 55% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes animateThirdMobile {
+  0%, 65%, 75%, 100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  10%, 55% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes animateFourthMobile {
+  0%, 60%, 85%, 95%, 100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  70%, 85% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes animateFourthMobile {
+  0%, 60%, 85%, 95%, 100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  70%, 85% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes animateFifthMobile {
+  0%, 60%, 85%, 95%, 100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  70%, 85% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes animateFifthMobile {
+  0%, 60%, 85%, 95%, 100% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  70%, 85% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
 .approach {
   padding: 50px 0;
 }
