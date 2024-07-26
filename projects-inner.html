@@ -24,6 +24,58 @@
 			cursor: none;
 		}
 
+		.preloader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 9999;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			transition: all 0.35s ease-in-out;
+		}
+
+		.is--hidden {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+
+		.preloader__title {
+			position: relative;
+			z-index: 1;
+			display: block;
+			width: fit-content;
+			font-family: 'Manrope', sans-serif;
+			font-size: 25px;
+			font-weight: bold;
+			line-height: 1;
+			letter-spacing: -0.75px;
+			text-transform: uppercase;
+			text-align: center;
+			color: #575756;
+		}
+
+		.preloader__title::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -7px;
+			z-index: 1;
+			transform: translate(-100%, -100%);
+			display: block;
+			width: 7px;
+			height: 13px;
+			background-image: url('data:image/svg+xml,<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.794922 6.89992V0.231934H7.48233V5.49836C7.48233 8.03706 6.96773 9.88413 5.93852 11.0396C4.90932 12.195 3.2074 12.8484 0.832789 12.9999V10.6322C2.00764 10.5309 2.89767 10.1647 3.5029 9.53362C4.10812 8.9025 4.41106 8.0246 4.4117 6.89992H0.794922Z" fill="%23575756"/></svg>');
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+		}
+
 		.custom-cursor {
 			position: fixed;
 			z-index: 100000;
@@ -134,6 +186,9 @@
 </head>
 
 <body>
+	<div id="preloader" class="preloader">
+		<h1 class="preloader__title">Проект</h1>
+	</div>
 	<div class="custom-cursor" id="custom-cursor">
 		<svg>
 			<use xlink:href="img/sprite.svg#icon-cursor-arrow"></use>
@@ -470,6 +525,15 @@
 		</div>
 	</div>
 	<!-- end of menu -->
+	<script>
+		const preloader = document.getElementById("preloader");
+
+		window.addEventListener("load", function() {
+			setTimeout(() => {
+				preloader.classList.add("is--hidden");
+			}, 350)
+		});
+	</script>
 	<!-- scripts -->
 	<script src="libs/inputmask/inputmask.min.js"></script>
 	<script src="libs/swiper/swiper-bundle.min.js"></script>

@@ -846,6 +846,29 @@ svg {
   position: relative;
   z-index: 600;
   padding: 54px 0;
+}
+.header:not(.header--transparent) {
+  background: #FFFFFF;
+}
+.header--transparent .header__logotype-inner .default {
+  opacity: 0;
+}
+.header--transparent .header__logotype-inner .white {
+  opacity: 1;
+}
+.header--transparent .nav__link {
+  color: #FFFFFF;
+}
+.header--transparent .nav__link:hover {
+  color: #FFFFFF;
+}
+.header--transparent .c-language__btn {
+  color: #FFFFFF;
+}
+.header--transparent .c-language__btn:hover {
+  color: #FFFFFF;
+}
+.header--transparent .hamburger__inner {
   background: #FFFFFF;
 }
 .header--inner {
@@ -900,6 +923,17 @@ svg {
 }
 .header--inner .nav__item + .nav__item:nth-child(3) {
   margin-left: 208px;
+}
+@media screen and (max-width: 1023px) {
+  .header--transparent.is--menu .header__logotype-inner .default {
+    opacity: 1;
+  }
+  .header--transparent.is--menu .header__logotype-inner .white {
+    opacity: 0;
+  }
+  .header--transparent.is--menu .hamburger__inner {
+    background: #575756;
+  }
 }
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .header {
@@ -959,16 +993,27 @@ svg {
   height: 21px;
 }
 .header__logotype-inner {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
 }
 .header__logotype-inner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.header__logotype-inner .white {
+  opacity: 0;
 }
 .header__nav {
   margin: 0 auto;
