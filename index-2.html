@@ -39,7 +39,7 @@
 			transition: all 0.35s ease-in-out;
 		}
 
-		.is--hidden {
+		.preloader.is--hidden {
 			opacity: 0;
 			visibility: hidden;
 			pointer-events: none;
@@ -58,32 +58,22 @@
 
 		@keyframes preloaderSymbol {
 			0% {
-				transform: scale(1);
 				background-image: url('img/preloader-symbol-01.png');
 			}
 
 			25% {
-				transform: scale(1);
 				background-image: url('img/preloader-symbol-02.png');
 			}
 
 			50% {
-				transform: scale(1);
 				background-image: url('img/preloader-symbol-03.png');
 			}
 
 			75% {
-				transform: scale(1);
 				background-image: url('img/preloader-symbol-04.png');
 			}
 
-			90% {
-				transform: scale(1);
-				background-image: url('img/preloader-symbol-05.svg');
-			}
-
 			100% {
-				transform: scale(50);
 				background-image: url('img/preloader-symbol-05.svg');
 			}
 		}
@@ -130,8 +120,8 @@
 
 		.custom-cursor svg {
 			position: absolute;
-			width: 12px;
-			height: 12px;
+			width: 15px;
+			height: 15px;
 			opacity: 0;
 			color: #000000;
 			-webkit-transition: none;
@@ -185,7 +175,7 @@
 
 		.custom-cursor.left svg {
 			top: 50%;
-			left: -4px;
+			left: -6px;
 			-webkit-transform: translate(-100%, -50%) rotate(-90deg);
 			-ms-transform: translate(-100%, -50%) rotate(-90deg);
 			transform: translate(-100%, -50%) rotate(-90deg);
@@ -194,7 +184,7 @@
 
 		.custom-cursor.right svg {
 			top: 50%;
-			right: -4px;
+			right: -6px;
 			-webkit-transform: translate(100%, -50%) rotate(90deg);
 			-ms-transform: translate(100%, -50%) rotate(90deg);
 			transform: translate(100%, -50%) rotate(90deg);
@@ -217,6 +207,10 @@
 			color: #FFFFFF;
 		}
 
+		.custom-cursor.scrolling svg {
+			opacity: 0;
+		}
+
 		@media screen and (hover: none) {
 			.custom-cursor {
 				display: none;
@@ -224,6 +218,7 @@
 		}
 	</style>
 	<!-- styles -->
+	<link rel="stylesheet" href="libs/aos/aos.css">
 	<link rel="stylesheet" href="libs/swiper/swiper.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
@@ -768,6 +763,7 @@
 	</script>
 	<!-- scripts -->
 	<script src="libs/inputmask/inputmask.min.js"></script>
+	<script src="libs/aos/aos.js"></script>
 	<script src="libs/swiper/swiper-bundle.min.js"></script>
 	<script src="js/app.min.js"></script>
 </body>
