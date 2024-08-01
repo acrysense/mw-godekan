@@ -120,6 +120,9 @@
 
 		.custom-cursor svg {
 			position: absolute;
+			-webkit-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			transform: rotate(-90deg);
 			width: 15px;
 			height: 15px;
 			opacity: 0;
@@ -176,18 +179,18 @@
 		.custom-cursor.left svg {
 			top: 50%;
 			left: -6px;
-			-webkit-transform: translate(-100%, -50%) rotate(-90deg);
-			-ms-transform: translate(-100%, -50%) rotate(-90deg);
-			transform: translate(-100%, -50%) rotate(-90deg);
+			-webkit-transform: translate(-100%, -50%) rotate(-180deg);
+			-ms-transform: translate(-100%, -50%) rotate(-180deg);
+			transform: translate(-100%, -50%) rotate(-180deg);
 			opacity: 1;
 		}
 
 		.custom-cursor.right svg {
 			top: 50%;
 			right: -6px;
-			-webkit-transform: translate(100%, -50%) rotate(90deg);
-			-ms-transform: translate(100%, -50%) rotate(90deg);
-			transform: translate(100%, -50%) rotate(90deg);
+			-webkit-transform: translate(100%, -50%);
+			-ms-transform: translate(100%, -50%);
+			transform: translate(100%, -50%);
 			opacity: 1;
 		}
 

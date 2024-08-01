@@ -120,6 +120,9 @@
 
 		.custom-cursor svg {
 			position: absolute;
+			-webkit-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			transform: rotate(-90deg);
 			width: 15px;
 			height: 15px;
 			opacity: 0;
@@ -176,18 +179,18 @@
 		.custom-cursor.left svg {
 			top: 50%;
 			left: -6px;
-			-webkit-transform: translate(-100%, -50%) rotate(-90deg);
-			-ms-transform: translate(-100%, -50%) rotate(-90deg);
-			transform: translate(-100%, -50%) rotate(-90deg);
+			-webkit-transform: translate(-100%, -50%) rotate(-180deg);
+			-ms-transform: translate(-100%, -50%) rotate(-180deg);
+			transform: translate(-100%, -50%) rotate(-180deg);
 			opacity: 1;
 		}
 
 		.custom-cursor.right svg {
 			top: 50%;
 			right: -6px;
-			-webkit-transform: translate(100%, -50%) rotate(90deg);
-			-ms-transform: translate(100%, -50%) rotate(90deg);
-			transform: translate(100%, -50%) rotate(90deg);
+			-webkit-transform: translate(100%, -50%);
+			-ms-transform: translate(100%, -50%);
+			transform: translate(100%, -50%);
 			opacity: 1;
 		}
 
@@ -881,6 +884,142 @@
 							</div>
 							<button class="application-form__btn btn btn--white">заказать</button>
 						</form>
+						<div class="application-message application__message">
+							<p class="application-message__description application-message__description--lg">Спасибо, что выбрали Годекан. <br>Мы ценим ваше время и будем рады помочь вам.</p>
+							<picture class="application-message__icon">
+								<img src="img/icon-done.svg" alt="Icon">
+							</picture>
+							<p class="application-message__description">Наши специалисты рассмотрят вашу заявку и свяжутся с вами в течение 2 рабочих дней.</p>
+							<a href="projects.html" class="application-message__btn btn btn--white">наши проекты</a>
+						</div>
+						<div class="application-message application__message">
+							<p class="application-message__description application-message__description--lg">Похоже, что произошла ошибка в системе. Пожалуйста, проверьте, правильно ли заполнены все поля.</p>
+							<picture class="application-message__icon">
+								<img src="img/icon-error.svg" alt="Icon">
+							</picture>
+							<p class="application-message__description">Если проблема продолжает возникать, пожалуйста, свяжитесь с нами напрямую по телефону <a href="tel:78722566655">7(872) 256-66-55</a> или электронной почте <a href="mailto:akbgodekan@gmail.com">akbgodekan@gmail.com</a></p>
+							<a href="#" class="application-message__btn btn btn--white">вернуться к форме</a>
+						</div>
+					</div>
+					<picture class="application__bg">
+						<img src="img/application-bg.jpg" alt="Image">
+					</picture>
+				</div>
+			</section>
+			<!-- end of application -->
+			<!-- application -->
+			<section class="application cursor-white" id="application">
+				<div class="container">
+					<div class="application__wrap">
+						<h2 class="application__heading">
+							Ваша заявка <br>успешно отправлена!
+						</h2>
+						<form action="#" class="application-form application__form is--hidden">
+							<div class="input-field application-form__input">
+								<div class="input-field__inner">
+									<input type="text" class="input-field__input" placeholder="' Ваше имя">
+									<span class="input-field__error">Введите имя пользователя</span>
+								</div>
+							</div>
+							<div class="input-field application-form__input">
+								<div class="input-field__inner">
+									<input type="tel" class="input-field__input" placeholder="' Номер телефона">
+									<span class="input-field__error">Введите номер</span>
+								</div>
+							</div>
+							<div class="input-field application-form__input">
+								<div class="input-field__inner">
+									<input type="email" class="input-field__input" placeholder="' E-mail">
+									<span class="input-field__error">Введите e-mail</span>
+								</div>
+							</div>
+							<div class="input-field application-form__input">
+								<div class="input-field__inner">
+									<input type="text" class="input-field__input" placeholder="'  Сообщение">
+									<span class="input-field__error">Введите сообщение</span>
+								</div>
+							</div>
+							<div class="application-form__inner">
+								<p class="application-form__copyright">Отправляя форму, Вы соглашаетесь <br>с нашей политикой конфиденциальности</p>
+							</div>
+							<button class="application-form__btn btn btn--white">заказать</button>
+						</form>
+						<div class="application-message application__message is--active">
+							<p class="application-message__description application-message__description--lg">Спасибо, что выбрали Годекан. <br>Мы ценим ваше время и будем рады помочь вам.</p>
+							<picture class="application-message__icon">
+								<img src="img/icon-done.svg" alt="Icon">
+							</picture>
+							<p class="application-message__description">Наши специалисты рассмотрят вашу заявку и свяжутся с вами в течение 2 рабочих дней.</p>
+							<a href="projects.html" class="application-message__btn btn btn--white">наши проекты</a>
+						</div>
+						<div class="application-message application__message">
+							<p class="application-message__description application-message__description--lg">Похоже, что произошла ошибка в системе. Пожалуйста, проверьте, правильно ли заполнены все поля.</p>
+							<picture class="application-message__icon">
+								<img src="img/icon-error.svg" alt="Icon">
+							</picture>
+							<p class="application-message__description">Если проблема продолжает возникать, пожалуйста, свяжитесь с нами напрямую по телефону <a href="tel:78722566655">7(872) 256-66-55</a> или электронной почте <a href="mailto:akbgodekan@gmail.com">akbgodekan@gmail.com</a></p>
+							<a href="#" class="application-message__btn btn btn--white">вернуться к форме</a>
+						</div>
+					</div>
+					<picture class="application__bg">
+						<img src="img/application-bg.jpg" alt="Image">
+					</picture>
+				</div>
+			</section>
+			<!-- end of application -->
+			<!-- application -->
+			<section class="application cursor-white" id="application">
+				<div class="container">
+					<div class="application__wrap">
+						<h2 class="application__heading">
+							Упс! Мы не смогли <br>обработать вашу заявку.
+						</h2>
+						<form action="#" class="application-form application__form is--hidden">
+							<div class="input-field application-form__input">
+								<div class="input-field__inner">
+									<input type="text" class="input-field__input" placeholder="' Ваше имя">
+									<span class="input-field__error">Введите имя пользователя</span>
+								</div>
+							</div>
+							<div class="input-field application-form__input">
+								<div class="input-field__inner">
+									<input type="tel" class="input-field__input" placeholder="' Номер телефона">
+									<span class="input-field__error">Введите номер</span>
+								</div>
+							</div>
+							<div class="input-field application-form__input">
+								<div class="input-field__inner">
+									<input type="email" class="input-field__input" placeholder="' E-mail">
+									<span class="input-field__error">Введите e-mail</span>
+								</div>
+							</div>
+							<div class="input-field application-form__input">
+								<div class="input-field__inner">
+									<input type="text" class="input-field__input" placeholder="'  Сообщение">
+									<span class="input-field__error">Введите сообщение</span>
+								</div>
+							</div>
+							<div class="application-form__inner">
+								<p class="application-form__copyright">Отправляя форму, Вы соглашаетесь <br>с нашей политикой конфиденциальности</p>
+							</div>
+							<button class="application-form__btn btn btn--white">заказать</button>
+						</form>
+						<div class="application-message application__message">
+							<p class="application-message__description application-message__description--lg">Спасибо, что выбрали Годекан. <br>Мы ценим ваше время и будем рады помочь вам.</p>
+							<picture class="application-message__icon">
+								<img src="img/icon-done.svg" alt="Icon">
+							</picture>
+							<p class="application-message__description">Наши специалисты рассмотрят вашу заявку и свяжутся с вами в течение 2 рабочих дней.</p>
+							<a href="projects.html" class="application-message__btn btn btn--white">наши проекты</a>
+						</div>
+						<div class="application-message application__message is--active">
+							<p class="application-message__description application-message__description--lg">Похоже, что произошла ошибка в системе. Пожалуйста, проверьте, правильно ли заполнены все поля.</p>
+							<picture class="application-message__icon">
+								<img src="img/icon-error.svg" alt="Icon">
+							</picture>
+							<p class="application-message__description">Если проблема продолжает возникать, пожалуйста, свяжитесь с нами напрямую по телефону <a href="tel:78722566655">7(872) 256-66-55</a> или электронной почте <a href="mailto:akbgodekan@gmail.com">akbgodekan@gmail.com</a></p>
+							<a href="#" class="application-message__btn btn btn--white">вернуться к форме</a>
+						</div>
 					</div>
 					<picture class="application__bg">
 						<img src="img/application-bg.jpg" alt="Image">
