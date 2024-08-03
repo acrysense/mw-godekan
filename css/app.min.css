@@ -2449,6 +2449,12 @@ svg {
       -ms-transform: scale(0.95);
           transform: scale(0.95);
 }
+.approach__item:first-child {
+  padding-top: 0;
+}
+.approach__item:last-child {
+  padding-bottom: 0;
+}
 @media screen and (max-width: 743px) {
   .approach__item {
     padding: 75px 0;
@@ -3140,6 +3146,42 @@ svg {
     margin-top: 60px;
   }
 }
+@media screen and (max-width: 1023px) {
+  .about-inner__group--icon {
+    position: relative;
+    z-index: 1;
+  }
+  .about-inner__group--icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    background-image: url(../img/sprite.svg#icon-gesture-click);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .about-inner__group--icon {
+    padding-right: 40px;
+  }
+  .about-inner__group--icon::before {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .about-inner__group--icon {
+    padding-right: 30px;
+  }
+  .about-inner__group--icon::before {
+    width: 24px;
+    height: 24px;
+  }
+}
 .about-inner__group + .about-inner__group {
   margin-top: 30px;
 }
@@ -3160,16 +3202,45 @@ svg {
   text-transform: uppercase;
   color: #575756;
 }
+.about-inner__title > span {
+  position: relative;
+  z-index: 1;
+  margin-left: 4px;
+}
+.about-inner__title > span::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -2px;
+  z-index: 1;
+  display: block;
+  width: 2px;
+  height: 6px;
+  background-image: url(../img/logotype-symbol.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .about-inner__title {
     font-size: 32px;
+    line-height: 1;
     letter-spacing: -0.96px;
+  }
+  .about-inner__title > span::before {
+    top: 10px;
+    left: -4px;
+    width: 3.5px;
+    height: 7px;
   }
 }
 @media screen and (max-width: 743px) {
   .about-inner__title {
     font-size: 20px;
     letter-spacing: -0.6px;
+  }
+  .about-inner__title > span::before {
+    top: 6px;
   }
 }
 .about-inner__description {
@@ -3483,6 +3554,13 @@ svg {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+@media screen and (max-width: 1023px) {
+  .team__wrapper {
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+}
 @media screen and (min-width: 1400px) {
   .team__item {
     width: calc(16.666666666% - 16.6666666667px);
@@ -3527,6 +3605,14 @@ svg {
     margin-top: 20px;
   }
 }
+.team__more {
+  margin: 50px auto 0;
+}
+@media screen and (min-width: 1024px) {
+  .team__more {
+    display: none;
+  }
+}
 
 .team-card {
   position: relative;
@@ -3536,6 +3622,11 @@ svg {
   content: "";
   display: block;
   padding-top: 156.5%;
+}
+@media screen and (hover: none) {
+  .team-card.is--active .team-card__body {
+    opacity: 1;
+  }
 }
 @media screen and (hover: hover) {
   .team-card:hover .team-card__body {
@@ -3934,8 +4025,8 @@ svg {
   max-height: 100%;
   width: auto;
   height: auto;
-  -webkit-filter: invert(59%) sepia(0%) saturate(0%) hue-rotate(46deg) brightness(94%) contrast(91%);
-          filter: invert(59%) sepia(0%) saturate(0%) hue-rotate(46deg) brightness(94%) contrast(91%);
+  -webkit-filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(46deg) brightness(100%) contrast(100%) opacity(0.6);
+          filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(46deg) brightness(100%) contrast(100%) opacity(0.6);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
@@ -5881,4 +5972,18 @@ svg {
   .not-found__btn {
     bottom: 30px;
   }
+}
+
+.icon-marker {
+  position: relative;
+  -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  display: block;
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
 }
