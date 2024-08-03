@@ -1449,6 +1449,12 @@ svg {
   overflow: hidden;
 }
 
+[data-aos][data-aos][data-aos-delay="3300"].aos-animate,
+body[data-aos-delay="3300"] [data-aos].aos-animate {
+  -webkit-transition-delay: 3.3s;
+          transition-delay: 3.3s;
+}
+
 .swiper {
   -webkit-transition: opacity 0.15s ease;
   transition: opacity 0.15s ease;

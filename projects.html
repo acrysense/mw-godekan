@@ -36,7 +36,7 @@
 			align-items: center;
 			justify-content: center;
 			padding: 20px;
-			transition: all 0.35s ease-in-out;
+			transition: all 0.75s ease-in-out;
 		}
 
 		.preloader.is--hidden {
@@ -53,27 +53,37 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center center;
-			animation: preloaderSymbol 2.5s forwards 0.5s;
+			animation: preloaderSymbol 2.6s forwards 0.5s;
 		}
 
 		@keyframes preloaderSymbol {
 			0% {
+				opacity: 1;
 				background-image: url('img/preloader-symbol-01.png');
 			}
 
 			25% {
+				opacity: 1;
 				background-image: url('img/preloader-symbol-02.png');
 			}
 
 			50% {
+				opacity: 1;
 				background-image: url('img/preloader-symbol-03.png');
 			}
 
 			75% {
+				opacity: 1;
 				background-image: url('img/preloader-symbol-04.png');
 			}
 
+			90% {
+				opacity: 1;
+				background-image: url('img/preloader-symbol-05.svg');
+			}
+
 			100% {
+				opacity: 0;
 				background-image: url('img/preloader-symbol-05.svg');
 			}
 		}
