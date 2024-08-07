@@ -236,7 +236,7 @@
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
-<body>
+<body class="scroll-disabled">
 	<div id="preloader" class="preloader">
 		<svg width="226" height="78" viewBox="0 0 226 78" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g clip-path="url(#clip0_522_19130)">
@@ -1110,6 +1110,9 @@
 			setTimeout(() => {
 				preloader.classList.add("is--hidden");
 			}, 350)
+			setTimeout(() => {
+				document.body.classList.remove("scroll-disabled");
+			}, 950)
 		});
 	</script>
 	<!-- scripts -->

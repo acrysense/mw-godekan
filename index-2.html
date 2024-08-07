@@ -236,7 +236,7 @@
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
-<body class="has-image">
+<body class="scroll-disabled">
 	<div id="preloader" class="preloader">
 		<div class="preloader__symbol"></div>
 	</div>
@@ -771,6 +771,7 @@
 		window.addEventListener("load", function() {
 			setTimeout(() => {
 				preloader.classList.add("is--hidden");
+				document.body.classList.remove("scroll-disabled");
 			}, 2800)
 		});
 	</script>
