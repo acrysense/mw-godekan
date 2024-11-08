@@ -845,7 +845,18 @@ svg {
 .header {
   position: relative;
   z-index: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 54px 0;
+  min-height: 129px;
 }
 .header:not(.header--transparent) {
   background: #FFFFFF;
@@ -873,6 +884,7 @@ svg {
 }
 .header--inner {
   padding: 40px 0 68px;
+  min-height: 162px;
 }
 @media screen and (min-width: 1024px) {
   .header--inner .header__wrapper {
@@ -924,6 +936,54 @@ svg {
 .header--inner .nav__item + .nav__item:nth-child(3) {
   margin-left: 208px;
 }
+.header.is--fixed .header__fixed {
+  padding: 19px 0;
+  -webkit-transition: all 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: all 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.header.is--fixed .header__fixed::before {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.65s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.header.is--fixed .header__logotype-inner .default {
+  opacity: 1;
+  -webkit-transition: opacity 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: opacity 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.header.is--fixed .header__logotype-inner .white {
+  opacity: 0;
+  -webkit-transition: opacity 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: opacity 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.header.is--fixed .nav__link {
+  color: #262626;
+  -webkit-transition: color 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: color 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.header.is--fixed .nav__link:hover {
+  color: #262626;
+}
+.header.is--fixed .c-language__btn {
+  color: #262626;
+  -webkit-transition: color 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: color 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.header.is--fixed .c-language__btn:hover {
+  color: #262626;
+}
+.header.is--fixed .hamburger__inner {
+  background: #262626;
+  -webkit-transition: background 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: background 0.65s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.header.is--fixed.header--inner .header__fixed {
+  padding: 19px 0 19px;
+}
 @media screen and (max-width: 1023px) {
   .header--transparent.is--menu .header__logotype-inner .default {
     opacity: 1;
@@ -938,10 +998,57 @@ svg {
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .header {
     padding: 50px 0 91px;
+    min-height: 162px;
+  }
+  .header--inner {
+    min-height: 162px;
   }
 }
 @media screen and (max-width: 743px) {
   .header {
+    padding: 30px 0 62px;
+    min-height: 129px;
+  }
+  .header--inner {
+    min-height: 113px;
+  }
+}
+.header__fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 400;
+  padding: 54px 0;
+  width: 100%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.header__fixed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .header__fixed {
+    padding: 50px 0 91px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .header__fixed {
     padding: 30px 0 62px;
   }
 }
@@ -951,9 +1058,9 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1653,7 +1760,7 @@ body[data-aos-delay="3300"] [data-aos].aos-animate {
 }
 @media screen and (max-width: 743px) {
   .main__wrap {
-    margin-top: -113px;
+    margin-top: -129px;
   }
 }
 .main__logotype {
