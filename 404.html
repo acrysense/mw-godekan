@@ -49,42 +49,48 @@
 			display: block;
 			width: 105px;
 			height: 201px;
-			background-image: url('img/preloader-symbol-01.png');
+			background-image: url('img/preloader-symbol-01.jpg');
 			background-repeat: no-repeat;
-			background-size: contain;
+			background-size: cover;
 			background-position: center center;
+			clip-path: polygon(0% 52.224%, 0% 0%, 100% 0%, 100% 41.247%, 100% 41.247%, 99.769% 47.05%, 99.077% 52.527%, 97.922% 57.68%, 96.306% 62.507%, 94.229% 67.009%, 91.689% 71.187%, 88.688% 75.039%, 85.225% 78.567%, 81.301% 81.769%, 76.915% 84.646%, 76.915% 84.646%, 71.996% 87.243%, 66.473% 89.604%, 60.347% 91.729%, 53.618% 93.619%, 46.285% 95.272%, 38.348% 96.689%, 29.808% 97.871%, 20.664% 98.817%, 10.917% 99.526%, 0.566% 100%, 0.566% 81.456%, 0.566% 81.456%, 5.709% 81.156%, 10.596% 80.731%, 15.228% 80.182%, 19.604% 79.508%, 23.724% 78.71%, 27.589% 77.787%, 31.199% 76.74%, 34.552% 75.568%, 37.651% 74.272%, 40.494% 72.852%, 40.494% 72.852%, 43.073% 71.311%, 45.381% 69.654%, 47.418% 67.881%, 49.184% 65.992%, 50.679% 63.988%, 51.902% 61.867%, 52.854% 59.63%, 53.535% 57.278%, 53.945% 54.809%, 54.084% 52.224%, 0% 52.224%);
 			animation: preloaderSymbol 2.6s forwards 0.5s;
 		}
 
 		@keyframes preloaderSymbol {
 			0% {
 				opacity: 1;
-				background-image: url('img/preloader-symbol-01.png');
+				background-image: url('img/preloader-symbol-01.jpg');
 			}
 
-			25% {
+			20% {
 				opacity: 1;
-				background-image: url('img/preloader-symbol-02.png');
+				background-image: url('img/preloader-symbol-02.jpg');
 			}
 
-			50% {
+			40% {
 				opacity: 1;
-				background-image: url('img/preloader-symbol-03.png');
+				background-image: url('img/preloader-symbol-03.jpg');
 			}
 
-			75% {
+			60% {
 				opacity: 1;
-				background-image: url('img/preloader-symbol-04.png');
+				background-image: url('img/preloader-symbol-04.jpg');
+			}
+
+			80% {
+				opacity: 1;
+				background-image: linear-gradient(#000000, #000000);
 			}
 
 			90% {
 				opacity: 1;
-				background-image: url('img/preloader-symbol-05.svg');
+				background-image: linear-gradient(#000000, #000000);
 			}
 
 			100% {
 				opacity: 0;
-				background-image: url('img/preloader-symbol-05.svg');
+				background-image: linear-gradient(#000000, #000000);
 			}
 		}
 

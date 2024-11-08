@@ -984,6 +984,11 @@ svg {
 .header.is--fixed.header--inner .header__fixed {
   padding: 19px 0 19px;
 }
+@media screen and (min-width: 1024px) {
+  .header.is--fixed.header--inner .header__fixed::before {
+    height: 92px;
+  }
+}
 @media screen and (max-width: 1023px) {
   .header--transparent.is--menu .header__logotype-inner .default {
     opacity: 1;
@@ -1029,7 +1034,6 @@ svg {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
   left: 0;
   z-index: -1;
   -webkit-transform: translateY(-100%);
@@ -1037,10 +1041,11 @@ svg {
           transform: translateY(-100%);
   display: block;
   width: 100%;
-  height: 100%;
+  height: 59px;
   background: #FFFFFF;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  will-change: transform;
 }
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .header__fixed {
